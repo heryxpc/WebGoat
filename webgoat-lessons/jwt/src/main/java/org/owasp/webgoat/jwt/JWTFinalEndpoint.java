@@ -110,7 +110,7 @@ public class JWTFinalEndpoint extends AssignmentEndpoint {
                     return failed(this).feedback("jwt-final-jerry-account").build();
                 }
                 if ("Tom".equals(username)) {
-                    return success(this).build();
+                    return success(this).feedback("jwt-finall-sucess").build();
                 } else {
                     return failed(this).feedback("jwt-final-not-tom").build();
                 }

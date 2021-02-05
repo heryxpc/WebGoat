@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   webgoat:
-    image: webgoat/webgoat-v8.0.0.snapshot
+    image: webgoat/webgoat-v8.0.0.snapshot.iteso
     extends:
       file: docker-compose.yml
       service: webgoat
@@ -10,4 +10,4 @@ services:
     extends:
       file: docker-compose.yml
       service: webwolf
-    image: webgoat/webwolf-v8.0.0.snapshot
+    image: webgoat/webwolf-v8.0.0.snapshot.iteso

@@ -45,7 +45,7 @@ import java.util.Map;
 @AssignmentHints({"password-reset-hint1", "password-reset-hint2", "password-reset-hint3", "password-reset-hint4", "password-reset-hint5", "password-reset-hint6"})
 public class ResetLinkAssignment extends AssignmentEndpoint {
 
-    static final String PASSWORD_TOM_9 = "somethingVeryRandomWhichNoOneWillEverTypeInAsPasswordForTom";
+    static final String PASSWORD_TOM_9 = "estaesunarandompasswordE05D2B18494CD3777419648CBF094";
     static final String TOM_EMAIL = "tom@webgoat-cloud.org";
     static Map<String, String> userToTomResetLink = new HashMap<>();
     static Map<String, String> usersToTomPassword = Maps.newHashMap();

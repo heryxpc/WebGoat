@@ -78,6 +78,7 @@ img {
   padding: 0;
   position: relative;
   background: url('img/logoBG.jpg') no-repeat 0px 0px;
+  background-size: cover;
 }
 #header .logo {
   color: #fff;

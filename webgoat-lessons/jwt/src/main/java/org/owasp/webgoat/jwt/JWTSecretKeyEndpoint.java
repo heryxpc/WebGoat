@@ -79,7 +79,7 @@ public class JWTSecretKeyEndpoint extends AssignmentEndpoint {
                 String user = (String) claims.get("username");
 
                 if (WEBGOAT_USER.equalsIgnoreCase(user)) {
-                    return success(this).build();
+                    return success(this).feedback("jwt-secret-sucess").build();
                 } else {
                     return failed(this).feedback("jwt-secret-incorrect-user").feedbackArgs(user).build();
                 }

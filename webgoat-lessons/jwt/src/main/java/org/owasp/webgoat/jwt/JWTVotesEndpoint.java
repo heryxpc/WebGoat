@@ -167,7 +167,7 @@ public class JWTVotesEndpoint extends AssignmentEndpoint {
                     return failed(this).feedback("jwt-only-admin").build();
                 } else {
                     votes.values().forEach(vote -> vote.reset());
-                    return success(this).build();
+                    return success(this).feedback("jwt-vote-sucess").build();
                 }
             } catch (JwtException e) {
                 return failed(this).feedback("jwt-invalid-token").output(e.toString()).build();
