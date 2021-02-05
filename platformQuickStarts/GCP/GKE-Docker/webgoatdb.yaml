@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webgoatdb-dpl
+  namespace: webgoat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webgoatdb
+  template:
+    metadata:
+      name: webgoatdb
+      labels:
+        app: webgoatdb
+    spec:
+      containers:
+        -
+          image: postgres:9.4
+          name: webgoatdb
+          ports:
+            -
+              containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "webgoatiteso"
+            - name: POSTGRES_USER
+              value: "webgoat"
+            - name: POSTGRES_DB
+              value: "webgoat"

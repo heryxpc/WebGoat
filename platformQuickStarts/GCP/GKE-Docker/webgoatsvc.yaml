@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webgoatapp
+  name: webgoatsvc
+  namespace: webgoat
+spec:
+  ports:
+    -
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: webgoatapp
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: webwolfapp
+  name: webwolfsvc
+  namespace: webgoat
+spec:
+  ports:
+    -
+      name: webgoat
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+    -
+      name: webwolf
+      port: 80
+      targetPort: 9090
+      protocol: TCP
+  selector:
+    app: webwolfapp
+  type: LoadBalancer

@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webwolf-dpl
+  namespace: webgoat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webwolfapp
+  template:
+    metadata:
+      name: webwolfapp
+      labels:
+        app: webwolfapp
+    spec:
+      containers:
+        -
+          image: webgoat/goatandwolf
+          name: webwolf
+          ports:
+            -
+              containerPort: 9090
+            -
+              containerPort: 8080
